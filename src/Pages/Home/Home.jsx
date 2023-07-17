@@ -4,6 +4,7 @@ import Search from "../../components/Search/Search";
 import { useState } from "react";
 
 import MovieCard from "../../components/MovieCard/MovieCard";
+import Loader from "../../components/Loader/Loader";
 
 import "../Home/home.scss";
 
@@ -19,10 +20,13 @@ const Home = () => {
     <div className="home">
       <Search setSearchWord={setSearchWord} />
       <div className="intro">
-        <h1>Everything about the movies in one place!</h1>
+        <h1>
+          Everything about the <span>movies</span> in one place!
+        </h1>
         <p>Find the one you want to see.</p>
       </div>
-      {data && <MovieCard />}
+      {isLoading && <Loader />}
+      <MovieCard data={data} />
     </div>
   );
 };

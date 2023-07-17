@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import "../Navbar/navbar.scss";
 
+import About from "../../Pages/About/About";
+
 const NavBar = () => {
   return (
     <nav className="navbar">
@@ -16,7 +18,9 @@ const NavBar = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/">About</Link>
+              <Link to="/about" element={<About />}>
+                About
+              </Link>
             </li>
             <li>
               <button className="theme-button">

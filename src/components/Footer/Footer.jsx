@@ -7,22 +7,46 @@ const Footer = () => {
       <div className="overlay">
         <div className="footer-links">
           <ul>
-            <li></li>
-            <li>Home</li>
-            <li>About</li>
-            <li>Home</li>
+            <li>
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="">About</a>
+            </li>
+            <li>
+              <a href="">Contact</a>
+            </li>
+            <li>
+              <a href="">Home</a>
+            </li>
           </ul>
           <ul>
-            <li>Home</li>
-            <li>Home</li>
-            <li>Home</li>
-            <li>Home</li>
+            <li>
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="">About</a>
+            </li>
+            <li>
+              <a href="">Contact</a>
+            </li>
+            <li>
+              <a href="">Home</a>
+            </li>
           </ul>
           <ul>
-            <li>Home</li>
-            <li>Home</li>
-            <li>Home</li>
-            <li>Home</li>
+            <li>
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="">About</a>
+            </li>
+            <li>
+              <a href="">Contact</a>
+            </li>
+            <li>
+              <a href="">Home</a>
+            </li>
           </ul>
         </div>
         <div className="attribution">

@@ -8,6 +8,7 @@ footer {
   background-position: center;
   color: white;
   text-align: center;
+  border-top: solid 2px $red;
 
   .overlay {
     background-color: $overlay;
@@ -23,6 +24,15 @@ footer {
 
     ul {
       list-style: none;
+
+      a {
+        color: $lightGray;
+        transition: 0.15s ease;
+
+        &:hover {
+          color: $redHover;
+        }
+      }
     }
   }
 

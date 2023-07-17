@@ -9,17 +9,19 @@
 //colors:
 $white: #fff;
 $black: #000;
+$lightGray: #cccccc;
 $lightBacground: #ebe8e8;
 $darkBacground: #000613;
 $overlay: #000000de;
 $red: #e50914;
-$redHover: #d60a14;
+$redHover: #c40b14;
 
 html {
   font-family: "Roboto", sans-serif;
 }
 
 body {
+  min-height: 100vh;
   background-color: $lightBacground;
 
   &:dark {
