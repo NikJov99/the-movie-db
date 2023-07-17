@@ -1,0 +1,62 @@
+@import "../../../index.scss";
+
+.navbar {
+  background-color: $black;
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+
+  .navbar-inner-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .logo-container {
+    img {
+      height: 50px;
+    }
+  }
+
+  .navigation-container {
+    width: 30%;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        color: $white;
+        font-size: 1.2rem;
+        transition: 0.15s ease;
+
+        &:hover {
+          cursor: pointer;
+          color: $red;
+        }
+      }
+
+      .theme-button {
+        all: unset;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        padding: 0.3rem 1rem;
+        background-color: $red;
+        color: white;
+        border-radius: 5px;
+        transition: 0.15s ease;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $redHover;
+        }
+      }
+    }
+  }
+}

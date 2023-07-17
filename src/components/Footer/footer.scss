@@ -1,0 +1,32 @@
+@import "../../../index.scss";
+
+footer {
+  background-color: gray;
+  background-image: url(../../assets/images/footer-bacground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+
+  .overlay {
+    background-color: $overlay;
+    height: 100%;
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 0;
+    line-height: 1.8rem;
+
+    ul {
+      list-style: none;
+    }
+  }
+
+  .attribution {
+    padding: 1rem 0;
+  }
+}

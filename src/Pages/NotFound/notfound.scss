@@ -1,0 +1,36 @@
+@import "./index.scss";
+
+.not-found-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+
+  h1 {
+    font-size: 10rem;
+    font-weight: 800;
+    margin: 2rem 0;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  a {
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: $red;
+    color: white;
+    transition: 0.15s ease;
+    margin: 1rem 0;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $redHover;
+    }
+  }
+}
