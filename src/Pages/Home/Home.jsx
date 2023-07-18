@@ -11,7 +11,7 @@ import "../Home/home.scss";
 const Home = () => {
   const { isLoading, error, data } = useQuery({
     queryKey: ["allMovies"],
-    queryFn: () => fetchMovies(),
+    queryFn: fetchMovies,
   });
 
   const [searchWord, setSearchWord] = useState("");
@@ -26,7 +26,10 @@ const Home = () => {
         <p>Find the one you want to see.</p>
       </div>
       {isLoading && <Loader />}
-      <MovieCard data={data} />
+      <div className="movie-cards-container">
+        {data &&
+          data.map((movie) => <MovieCard key={movie.id} movieData={movie} />)}
+      </div>
     </div>
   );
 };

@@ -1,70 +1,19 @@
 import { Link } from "react-router-dom";
 import "./moviecard.scss";
 
-const MovieCard = ({ data }) => {
+const MovieCard = ({ movieData }) => {
+  const backgroundImageStyle = {
+    backgroundImage: `url(http://image.tmdb.org/t/p/w500${movieData.poster_path})`,
+  };
+
   return (
-    <div className="movie-cards-container">
-      <div className="movie-card">
+    <Link to={`/movies/${movieData.id}`}>
+      <div className="movie-card" style={backgroundImageStyle}>
         <div className="overlay-movie">
-          <p>Fight Club</p>
+          <p>{movieData.title}</p>
         </div>
       </div>
-      <div className="movie-card">
-        <div className="overlay-movie">
-          <p>Fight Club</p>
-        </div>
-      </div>
-      <div className="movie-card">
-        <div className="overlay-movie">
-          <p>Fight Club</p>
-        </div>
-      </div>
-      <div className="movie-card">
-        <div className="overlay-movie">
-          <p>Fight Club</p>
-        </div>
-      </div>
-      <div className="movie-card">
-        <div className="overlay-movie">
-          <p>Fight Club</p>
-        </div>
-      </div>
-      <div className="movie-card">
-        <div className="overlay-movie">
-          <p>Fight Club</p>
-        </div>
-      </div>
-      <div className="movie-card">
-        <div className="overlay-movie">
-          <p>Fight Club</p>
-        </div>
-      </div>
-      <div className="movie-card">
-        <div className="overlay-movie">
-          <p>Fight Club</p>
-        </div>
-      </div>
-      <div className="movie-card">
-        <div className="overlay-movie">
-          <p>Fight Club</p>
-        </div>
-      </div>
-      <div className="movie-card">
-        <div className="overlay-movie">
-          <p>Fight Club</p>
-        </div>
-      </div>
-      <div className="movie-card">
-        <div className="overlay-movie">
-          <p>Fight Club</p>
-        </div>
-      </div>
-      <div className="movie-card">
-        <div className="overlay-movie">
-          <p>Fight Club</p>
-        </div>
-      </div>
-    </div>
+    </Link>
   );
 };
 

@@ -7,6 +7,7 @@ import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import Footer from "./components/Footer/Footer";
 import NotFound from "./Pages/NotFound/NotFound";
+import MovieDetails from "./Pages/MovieDetails/MovieDetails";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/movies/:id" element={<MovieDetails />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />

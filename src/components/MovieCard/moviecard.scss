@@ -2,20 +2,32 @@
 
 .movie-cards-container {
   display: flex;
-  flex-wrap: wrap;
-  margin: 2rem 0;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  margin: 3rem 0;
 
-  &::-webkit-scrollbar {
-    display: none;
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
 }
 
 .movie-card {
   flex-shrink: 0;
-  height: 350px;
-  width: 250px;
+  height: 410px;
+  width: 270px;
   color: black;
-  background-image: url(../../assets/images/fight-club.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   margin: 2rem;

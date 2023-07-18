@@ -1,0 +1,35 @@
+@import "../../../index.scss";
+
+.movie-details-container {
+  display: flex;
+  margin: auto;
+  max-width: 1300px;
+
+  .image-container {
+    img {
+      height: 70%;
+      border-radius: 7px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      transition: 0.15s ease;
+
+      &:hover {
+        transform: (scale(1.1));
+      }
+    }
+  }
+
+  .text-container {
+    h1 {
+      margin: 3rem 0;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 2rem 0;
+    }
+
+    span {
+      font-weight: 600;
+    }
+  }
+}
