@@ -28,7 +28,17 @@ const Home = () => {
       {isLoading && <Loader />}
       <div className="movie-cards-container">
         {data &&
-          data.map((movie) => <MovieCard key={movie.id} movieData={movie} />)}
+          data
+            .filter((movie) => {
+              if (searchWord === "") {
+                return true;
+              } else {
+                return movie.title
+                  .toLowerCase()
+                  .includes(searchWord.toLowerCase());
+              }
+            })
+            .map((movie) => <MovieCard key={movie.id} movieData={movie} />)}
       </div>
     </div>
   );

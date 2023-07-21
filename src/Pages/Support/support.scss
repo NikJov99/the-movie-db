@@ -1,0 +1,26 @@
+@import "../../../index.scss";
+
+.support-container {
+  width: 80%;
+  margin: 0 auto;
+  height: 100vh;
+
+  section {
+    border-bottom: solid 2px $red;
+  }
+
+  h1,
+  p {
+    color: white;
+    margin: 2rem 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  a {
+    color: $red;
+    font-weight: 600;
+  }
+}

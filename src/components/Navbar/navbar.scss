@@ -3,13 +3,24 @@
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  background-color: #000000e0;
+  justify-content: space-between;
+  background-color: #00000056;
   backdrop-filter: blur(5px);
   position: sticky;
   top: 0;
-  padding: 0.5rem;
+  padding: 0.5rem 7rem;
   z-index: 1;
+
+  a {
+    text-decoration: none;
+  }
+
+  .main-logo {
+    color: $red;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: "Koulen", cursive;
+  }
 
   ul {
     display: flex;
@@ -23,7 +34,6 @@
 
     a {
       color: $white;
-      text-decoration: none;
       font-weight: 600;
       font-size: 1.2rem;
 

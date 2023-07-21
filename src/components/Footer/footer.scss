@@ -1,19 +1,10 @@
 @import "../../../index.scss";
 
 footer {
-  background-color: gray;
-  background-image: url(../../assets/images/footer-bacground.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: rgb(0, 0, 0);
   color: white;
   text-align: center;
-  border-top: solid 2px $red;
-
-  .overlay {
-    background-color: $overlay;
-    height: 100%;
-  }
+  border-top: solid 4px rgb(70, 70, 70);
 
   .footer-links {
     display: flex;
@@ -21,6 +12,13 @@ footer {
     justify-content: space-around;
     padding: 2rem 0;
     line-height: 1.8rem;
+
+    .social-media-links {
+      display: flex;
+      li {
+        padding: 1rem;
+      }
+    }
 
     ul {
       list-style: none;

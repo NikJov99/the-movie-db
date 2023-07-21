@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Roboto:wght@300;400;700&display=swap");
 
 * {
   margin: 0;
@@ -21,8 +21,11 @@ html {
 }
 
 body {
+  background-image: url(./src/assets/images/header-bacground2.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
   min-height: 100vh;
-  background-color: $lightBacground;
+  background-color: black;
 
   &:dark {
     background-color: $darkBacground;

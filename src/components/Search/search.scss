@@ -11,10 +11,14 @@
 
     input {
       padding: 1rem;
-      width: 100%;
       outline: none;
       border: none;
       border-radius: 5px;
+      width: 500px;
+      color: white;
+      background-color: #00000056;
+      backdrop-filter: blur(5px);
+      border: solid 2px rgb(70, 70, 70);
     }
 
     button {
@@ -40,8 +44,12 @@
     margin: 0 auto;
 
     form {
-      width: 100%;
+      width: 90vw;
       flex-direction: column;
+
+      input {
+        width: 100%;
+      }
 
       button {
         width: 100%;
