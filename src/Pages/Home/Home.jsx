@@ -18,13 +18,13 @@ const Home = () => {
 
   return (
     <div className="home">
-      <Search setSearchWord={setSearchWord} />
       <div className="intro">
         <h1>
           Everything about the <span>movies</span> in one place!
         </h1>
         <p>Find the one you want to see.</p>
       </div>
+      <Search setSearchWord={setSearchWord} />
       {isLoading && <Loader />}
       <div className="movie-cards-container">
         {data &&

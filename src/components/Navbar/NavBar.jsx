@@ -1,49 +1,86 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../Navbar/navbar.scss";
 
 import About from "../../Pages/About/About";
+import Button from "../Button/Button";
+import { useState } from "react";
 
 const NavBar = () => {
+  const [mobileIcon, setMobileIcon] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
+
+  const handleClick = () => {
+    setMobileIcon(!mobileIcon);
+    showMobileMenu();
+  };
+
+  const showMobileMenu = () => {
+    setMobileMenu(!mobileMenu);
+  };
+
   return (
     <nav className="navbar">
-      <div className="navbar-inner-container">
-        <div className="logo-container">
-          <Link to="/">
-            <img src="/movie.svg" alt="logo" />
-          </Link>
-        </div>
-        <div className="navigation-container">
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about" element={<About />}>
-                About
-              </Link>
-            </li>
-            <li>
-              <button className="theme-button">
-                Lights Off
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 18V12.75M12 12.75C12.5179 12.75 13.0206 12.6844 13.5 12.561M12 12.75C11.4821 12.75 10.9794 12.6844 10.5 12.561M14.25 20.0394C13.5212 20.1777 12.769 20.25 12 20.25C11.231 20.25 10.4788 20.1777 9.75 20.0394M13.5 22.422C13.007 22.4736 12.5066 22.5 12 22.5C11.4934 22.5 10.993 22.4736 10.5 22.422M14.25 18V17.8083C14.25 16.8254 14.9083 15.985 15.7585 15.4917C17.9955 14.1938 19.5 11.7726 19.5 9C19.5 4.85786 16.1421 1.5 12 1.5C7.85786 1.5 4.5 4.85786 4.5 9C4.5 11.7726 6.00446 14.1938 8.24155 15.4917C9.09173 15.985 9.75 16.8254 9.75 17.8083V18"
-                    stroke="white"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-            </li>
-          </ul>
-        </div>
+      <NavLink>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="64"
+          height="64"
+          viewBox="0 0 64 64"
+        >
+          <g fill="none" fill-rule="evenodd">
+            <circle cx="32" cy="32" r="12" fill="#e50914" />
+            <circle
+              cx="32"
+              cy="32"
+              r="19"
+              stroke="#ECECEC"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <circle
+              cx="32"
+              cy="32"
+              r="30"
+              stroke="#979797"
+              stroke-linecap="round"
+              stroke-width="2"
+            />
+            <path
+              stroke="#979797"
+              stroke-linecap="square"
+              stroke-width="2"
+              d="M32,3 L32,8 M61,32 L56,32 M32,61 L32,56 M3,32 L8,32"
+            />
+            <polygon fill="#FFF" points="38 32 28 37 28 27" />
+          </g>
+        </svg>
+      </NavLink>
+      <div>
+        <ul className={mobileMenu ? " active" : ""}>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" element={<About />}>
+              About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/support" element={<About />}>
+              Support
+            </NavLink>
+          </li>
+          <li>
+            <Button />
+          </li>
+        </ul>
+      </div>
+      <div className="mobile">
+        <i
+          id="bar"
+          onClick={handleClick}
+          className={mobileIcon ? "fas fa-times" : "fas fa-bars"}
+        ></i>
       </div>
     </nav>
   );

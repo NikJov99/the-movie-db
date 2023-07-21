@@ -1,13 +1,17 @@
 @import "../../../index.scss";
 
 .movie-details-container {
+  height: 100vh;
   display: flex;
-  margin: auto;
-  max-width: 1300px;
+  justify-content: center;
+  align-items: center;
 
   .image-container {
+    width: 30%;
+
     img {
-      height: 70%;
+      object-fit: contain;
+      height: 650px;
       border-radius: 7px;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       transition: 0.15s ease;
@@ -19,6 +23,11 @@
   }
 
   .text-container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+
     h1 {
       margin: 3rem 0;
       font-weight: 700;
