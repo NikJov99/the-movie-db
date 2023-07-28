@@ -38,19 +38,6 @@ const About = () => {
             xmlns:xlink="http://www.w3.org/1999/xlink"
             viewBox="0 0 273.42 35.52"
           >
-            <defs>
-              <linearGradient
-                id="linear-gradient"
-                y1="17.76"
-                x2="273.42"
-                y2="17.76"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop offset="0" stop-color="#90cea1" />
-                <stop offset="0.56" stop-color="#3cbec9" />
-                <stop offset="1" stop-color="#00b3e5" />
-              </linearGradient>
-            </defs>
             <title>Asset 3</title>
             <g id="Layer_2" data-name="Layer 2">
               <g id="Layer_1-2" data-name="Layer 1">

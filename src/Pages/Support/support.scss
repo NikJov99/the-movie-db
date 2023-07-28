@@ -1,9 +1,11 @@
 @import "../../../index.scss";
 
 .support-container {
-  width: 80%;
-  margin: 0 auto;
-  height: 100vh;
+  max-width: 1440px;
+  margin: 5rem auto;
+  padding: 0 1rem;
+  color: white;
+  min-height: 100vh;
 
   section {
     border-bottom: solid 2px $red;
