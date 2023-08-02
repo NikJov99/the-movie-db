@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import "../Navbar/navbar.scss";
 
 import About from "../../Pages/About/About";
-import Button from "../Button/Button";
 import { useState } from "react";
 import Support from "../../Pages/Support/Support";
 

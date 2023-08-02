@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 import NotFound from "./Pages/NotFound/NotFound";
 import MovieDetails from "./Pages/MovieDetails/MovieDetails";
 import Support from "./Pages/Support/Support";
+import ScrollToTop from "./helpers/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ const App = () => {
     <main className="app-container">
       <QueryClientProvider client={queryClient}>
         <Router>
+          <ScrollToTop />
           <NavBar />
           <Routes>
             <Route path="/" element={<Home />} />
