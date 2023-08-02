@@ -18,23 +18,38 @@ const NavBar = () => {
     setMobileMenu(!mobileMenu);
   };
 
+  const handleNavLinkClick = () => {
+    setMobileMenu(false);
+    handleClick(false);
+  };
+
   return (
     <nav className="navbar">
-      <NavLink>
+      <NavLink onClick={handleNavLinkClick}>
         <h1 className="main-logo">MovieFlix</h1>
       </NavLink>
       <div>
         <ul className={mobileMenu ? " active" : ""}>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/" onClick={handleNavLinkClick}>
+              Home
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/about" element={<About />}>
+            <NavLink
+              to="/about"
+              element={<About />}
+              onClick={handleNavLinkClick}
+            >
               About
             </NavLink>
           </li>
           <li>
-            <NavLink to="/support" element={<Support />}>
+            <NavLink
+              to="/support"
+              element={<Support />}
+              onClick={handleNavLinkClick}
+            >
               Support
             </NavLink>
           </li>
@@ -43,7 +58,7 @@ const NavBar = () => {
       <div className="mobile">
         <i
           id="bar"
-          onClick={handleClick}
+          onClick={() => handleClick(!mobileIcon)}
           className={mobileIcon ? "fas fa-times" : "fas fa-bars"}
         ></i>
       </div>
