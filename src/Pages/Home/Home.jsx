@@ -25,8 +25,8 @@ const Home = () => {
         <p>Find the one you want to see.</p>
       </div>
       <Search setSearchWord={setSearchWord} />
-      {isLoading && <Loader />}
       <div className="movie-cards-container">
+        {isLoading && <Loader />}
         {data &&
           data
             .filter((movie) => {

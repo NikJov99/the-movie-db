@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 
 import YouTube from "react-youtube";
+import Loader from "../../components/Loader/Loader";
 
 import "./moviedetails.scss";
 
@@ -42,6 +43,7 @@ const MovieDetails = () => {
 
   return (
     <>
+      {isLoading && <Loader />}
       {data && (
         <div className="movie-details-container">
           <div className="movie-info">
@@ -68,7 +70,7 @@ const MovieDetails = () => {
           <div className="trailer-container">
             {(officialTrailer && (
               <div className="youtube-container">
-                {/* <YouTube videoId={officialTrailer.key} /> */}
+                <YouTube videoId={officialTrailer.key} />
               </div>
             )) || <p className="no-trailer">NO TRAILER AVAILABLE</p>}
           </div>

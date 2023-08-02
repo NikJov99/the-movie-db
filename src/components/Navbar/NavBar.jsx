@@ -25,7 +25,7 @@ const NavBar = () => {
 
   return (
     <nav className="navbar">
-      <NavLink onClick={handleNavLinkClick}>
+      <NavLink to="/">
         <h1 className="main-logo">MovieFlix</h1>
       </NavLink>
       <div>
