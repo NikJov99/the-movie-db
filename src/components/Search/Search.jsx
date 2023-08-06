@@ -1,6 +1,7 @@
+import GenresSelect from "../GenresSelect/GenresSelect";
 import "./search.scss";
 
-const Search = ({ setSearchWord }) => {
+const Search = ({ setSearchWord, setSelectedGenre }) => {
   return (
     <div className="search-container">
       <form>
@@ -10,6 +11,7 @@ const Search = ({ setSearchWord }) => {
           onChange={(e) => setSearchWord(e.target.value)}
         />
         <button type="submit">Search</button>
+        <GenresSelect setSelectedGenre={setSelectedGenre} />
       </form>
     </div>
   );

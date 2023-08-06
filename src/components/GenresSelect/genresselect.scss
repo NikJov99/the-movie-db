@@ -1,0 +1,11 @@
+@import "../../index.scss";
+
+.css-b62m3t-container {
+  min-width: 180px;
+}
+
+@media (max-width: 800px) {
+  .css-b62m3t-container {
+    width: 90vw;
+  }
+}
