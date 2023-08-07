@@ -6,6 +6,11 @@
   align-items: center;
   justify-content: center;
   min-height: 60vh;
+  width: 80%;
+  background-color: $lowestOpacityBlack;
+  backdrop-filter: blur(5px);
+  margin: 2rem auto;
+  border-radius: 10px;
 
   .movie-info {
     display: flex;
@@ -15,10 +20,10 @@
   }
 
   .image-container {
-    width: 30%;
+    width: 35%;
 
     img {
-      width: 100%;
+      width: 70%;
       object-fit: contain;
       border-radius: 7px;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -26,7 +31,7 @@
   }
 
   .text-container {
-    width: 30%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
@@ -51,6 +56,22 @@
 
   .trailer-container {
     margin: 5rem 0;
+    width: 100%;
+    height: 500px;
+
+    .youtube-container {
+      height: 100%;
+
+      div {
+        height: 100%;
+
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
     p {
       color: $red;
       font-weight: 700;
@@ -62,11 +83,18 @@
 
 @media (max-width: 800px) {
   .movie-details-container {
+    background-color: transparent;
+    backdrop-filter: blur(0);
+    width: 95vw;
+    margin: 0;
+
     .movie-info {
       flex-direction: column;
 
       .image-container {
-        width: 70%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
       }
 
       .text-container {
@@ -83,10 +111,12 @@
     }
 
     .trailer-container {
+      margin: 0 0 2rem 0;
       width: 95vw;
+      height: 70%;
 
-      iframe {
-        width: 100%;
+      .youtube-container {
+        height: 50%;
       }
     }
   }
