@@ -16,10 +16,7 @@
   }
 
   .main-logo {
-    color: $red;
-    text-decoration: none;
-    font-size: 2rem;
-    font-family: "Koulen", cursive;
+    padding: 0.5rem 0;
   }
 
   ul {
@@ -34,8 +31,8 @@
 
     a {
       color: $white;
-      font-weight: 600;
       font-size: 1.2rem;
+      font-weight: 600;
 
       &:hover {
         color: $redHover;

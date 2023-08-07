@@ -5,6 +5,8 @@ import { useState } from "react";
 import About from "../../Pages/About/About";
 import Support from "../../Pages/Support/Support";
 
+import logo from "../../assets/images/logo.png";
+
 //styles
 import "../Navbar/navbar.scss";
 
@@ -32,7 +34,7 @@ const NavBar = () => {
   return (
     <nav className="navbar">
       <NavLink to="/">
-        <h1 className="main-logo">MovieFlix</h1>
+        <img src={logo} alt="logo" className="main-logo" />
       </NavLink>
       <div>
         <ul className={mobileMenu ? " active" : ""}>
