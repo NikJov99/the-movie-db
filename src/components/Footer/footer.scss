@@ -9,12 +9,28 @@ footer {
   .footer-links {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding: 2rem 0;
     line-height: 1.8rem;
 
+    section {
+      width: 33%;
+    }
+
+    .main-logo-container {
+      a {
+        text-decoration: none;
+      }
+
+      .main-logo {
+        @include main-logo-styles;
+      }
+    }
+
     .social-media-links {
       display: flex;
+      justify-content: center;
+
       li {
         padding: 1rem;
       }

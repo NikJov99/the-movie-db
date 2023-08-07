@@ -18,6 +18,19 @@ $overlay: #000000de;
 $red: #e50914;
 $redHover: #b30c14;
 
+@mixin main-logo-styles {
+  color: $red;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: "Koulen", cursive;
+  transition: 0.15s ease;
+
+  &:hover {
+    cursor: pointer;
+    color: $redHover;
+  }
+}
+
 html {
   font-family: "Roboto", sans-serif;
 }

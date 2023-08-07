@@ -16,7 +16,7 @@
   }
 
   .main-logo {
-    padding: 0.5rem 0;
+    @include main-logo-styles;
   }
 
   ul {
