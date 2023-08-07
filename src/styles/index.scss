@@ -10,10 +10,13 @@
 $white: #fff;
 $black: #000;
 $lightGray: #cccccc;
-$darkBacground: #000613;
+$darkGray: #464646;
+$lowOpacityBlack: #00000056;
+$lowestOpacityBlack: #00000020;
+$highOpacityBlack: #000000ee;
 $overlay: #000000de;
 $red: #e50914;
-$redHover: #c40b14;
+$redHover: #b30c14;
 
 html {
   font-family: "Roboto", sans-serif;
@@ -24,7 +27,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   min-height: 100vh;
-  background-color: black;
+  background-color: $black;
 }
 
 @media (max-width: 800px) {

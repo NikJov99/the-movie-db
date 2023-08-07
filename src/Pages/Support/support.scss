@@ -4,7 +4,7 @@
   max-width: 1440px;
   margin: 5rem auto;
   padding: 0 1rem;
-  color: white;
+  color: $white;
   min-height: 100vh;
 
   section {
@@ -13,7 +13,7 @@
 
   h1,
   p {
-    color: white;
+    color: $white;
     margin: 2rem 0;
   }
 
@@ -24,5 +24,11 @@
   a {
     color: $red;
     font-weight: 600;
+    transition: 0.15s ease;
+
+    &:hover {
+      color: $redHover;
+      cursor: pointer;
+    }
   }
 }
