@@ -1,10 +1,11 @@
-@import "../../index.scss";
+@import "../../styles/index.scss";
 
 .movie-details-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 60vh;
 
   .movie-info {
     display: flex;

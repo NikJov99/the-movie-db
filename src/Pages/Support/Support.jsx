@@ -1,5 +1,7 @@
+// other
 import { Link } from "react-router-dom";
 
+// styles
 import "./support.scss";
 
 const Support = () => {

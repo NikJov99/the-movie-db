@@ -1,4 +1,7 @@
+//other
 import { Link } from "react-router-dom";
+
+// styles
 import "./moviecard.scss";
 
 const MovieCard = ({ movieData }) => {

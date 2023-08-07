@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
-import "./index.scss";
+import "./styles/index.scss";
 import NavBar from "./components/Navbar/NavBar";
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";

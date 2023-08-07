@@ -1,4 +1,7 @@
+// components
 import GenresSelect from "../GenresSelect/GenresSelect";
+
+//styles
 import "./search.scss";
 
 const Search = ({ setSearchWord, setSelectedGenre }) => {

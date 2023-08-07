@@ -5,8 +5,8 @@ const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}`;
 
 export const fetchMovies = async () => {
   try {
-    const response = await fetch(apiUrl);
-    const data = await response.json();
+    const response = await axios.get(apiUrl);
+    const data = response.data;
     console.log(data.results);
     return data.results;
   } catch (error) {

@@ -1,12 +1,16 @@
+// hooks
+import { useEffect, useState, useTransition } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { fetchMovies } from "../../helpers/fetchMovies";
-import { useEffect, useState } from "react";
-import { useTransition } from "react";
 
+// helpers
+import { fetchMovies } from "../../helpers/fetchMovies";
+
+// components
 import Search from "../../components/Search/Search";
 import MovieCard from "../../components/MovieCard/MovieCard";
 import Loader from "../../components/Loader/Loader";
 
+//styles
 import "../Home/home.scss";
 
 const Home = () => {

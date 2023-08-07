@@ -1,10 +1,17 @@
+// hooks
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 
-import YouTube from "react-youtube";
+// components
 import Loader from "../../components/Loader/Loader";
+import YouTube from "react-youtube";
 
+// helpers
+import { fetchMovie } from "../../helpers/fetchMovie";
+import { fetchTrailer } from "../../helpers/fetchTrailer";
+
+// styles
 import "./moviedetails.scss";
 
 const MovieDetails = () => {
@@ -12,32 +19,12 @@ const MovieDetails = () => {
 
   const [officialTrailer, setOfficialTrailer] = useState(null);
 
-  const fetchMovie = async (id) => {
-    const response = await fetch(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=3b22df8bb961ea9cd7c3f7444bc2e3e7`
-    );
-    const data = await response.json();
-    console.log(data);
-    return data;
-  };
-
-  const fetchTrailer = async (id) => {
-    const response = await fetch(
-      `https://api.themoviedb.org/3/movie/${id}/videos?api_key=3b22df8bb961ea9cd7c3f7444bc2e3e7`
-    );
-    const data = await response.json();
-    const officialTrailer = data.results.find(
-      (trailer) => trailer.name === "Official Trailer"
-    );
-    setOfficialTrailer(officialTrailer);
-    return officialTrailer;
-  };
-
   const { isLoading, error, data } = useQuery({
     queryKey: ["movie"],
     queryFn: () => fetchMovie(id),
-    onSuccess: (movieData) => {
-      fetchTrailer(id);
+    onSuccess: async () => {
+      const trailer = await fetchTrailer(id);
+      setOfficialTrailer(trailer);
     },
   });
 

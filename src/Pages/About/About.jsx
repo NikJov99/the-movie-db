@@ -1,3 +1,4 @@
+// styles
 import "./about.scss";
 
 const About = () => {

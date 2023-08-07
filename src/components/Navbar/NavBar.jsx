@@ -1,9 +1,15 @@
-import { NavLink } from "react-router-dom";
+// hooks
+import { useState } from "react";
+
+// pages
+import About from "../../Pages/About/About";
+import Support from "../../Pages/Support/Support";
+
+//styles
 import "../Navbar/navbar.scss";
 
-import About from "../../Pages/About/About";
-import { useState } from "react";
-import Support from "../../Pages/Support/Support";
+//other
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   const [mobileIcon, setMobileIcon] = useState(false);

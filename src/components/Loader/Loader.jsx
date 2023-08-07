@@ -1,3 +1,4 @@
+// styles
 import "./loader.scss";
 
 const Loader = () => {
