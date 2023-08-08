@@ -6,6 +6,7 @@
   .intro {
     margin: 3rem 0;
     line-height: 3rem;
+    animation: slide-down 0.5s ease-in-out forwards;
 
     h1 {
       font-size: 3rem;
@@ -16,6 +17,24 @@
       font-size: 1.5rem;
       color: $white;
     }
+  }
+
+  .search-container {
+    animation: slide-down 0.5s ease-in-out forwards;
+  }
+
+  .movie-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: $lowestOpacityBlack;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: 3rem auto;
+    width: 85%;
+    min-height: 60vh;
+    animation: opacity-up 0.5s ease-in-out forwards;
   }
 }
 

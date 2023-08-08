@@ -69,6 +69,7 @@
       right: 5%;
       left: 5%;
       background-color: $highOpacityBlack;
+      animation: slide-down 0.15s ease-in-out forwards;
 
       &.active {
         display: flex;
