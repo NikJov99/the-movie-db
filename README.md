@@ -36,7 +36,7 @@ The MOVIEFLIX App is a web application that allows users to search for movies, v
 1. Clone this repository to your local machine using:
 
    ```bash
-   git clone https://github.com/your-username/movieflix-app.git
+   git clone https://github.com/NikJov99/the-movie-db.git
    ```
 
 ## Getting Started
