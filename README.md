@@ -6,10 +6,10 @@ The MOVIEFLIX App is a web application that allows users to search for movies, v
 
 ## Table of Contents
 
-- [Getting Started](#getting-started)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
+- [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Contact](#contact)
