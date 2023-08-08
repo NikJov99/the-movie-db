@@ -1,5 +1,6 @@
 import ReactSelect from "react-select";
 import { genres } from "../../helpers/genres";
+import "./genresselect.scss";
 
 const GenresSelect = ({ setSelectedGenre }) => {
   return (
