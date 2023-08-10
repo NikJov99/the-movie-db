@@ -58,12 +58,12 @@
 
 @media (max-width: 800px) {
   .search-container {
+    flex-direction: column;
     width: 90vw;
     margin: 0 auto;
 
     form {
       width: 90vw;
-      padding: 0.5rem;
     }
   }
 }

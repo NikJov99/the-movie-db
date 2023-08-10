@@ -55,7 +55,6 @@ const MovieDetails = () => {
             </div>
           </div>
           <div className="trailer-container">
-            {isLoading && <Loader />}
             {(officialTrailer && (
               <div className="youtube-container">
                 <YouTube videoId={officialTrailer.key} />
