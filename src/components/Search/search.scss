@@ -3,23 +3,26 @@
 .search-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 1rem;
 
   form {
     z-index: 15;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
+    background-color: $lowOpacityBlack;
+    border: solid 2px $darkGray;
+    border-radius: 5px;
 
     input {
       padding: 1rem;
       outline: none;
       border: none;
-      border-radius: 5px;
       width: 500px;
       color: $white;
-      background-color: $lowOpacityBlack;
-      backdrop-filter: blur(5px);
-      border: solid 2px $darkGray;
+      background-color: transparent;
 
       &::placeholder {
         font-family: "Roboto", sans-serif;
@@ -29,16 +32,25 @@
 
     button {
       all: unset;
-      background-color: $red;
-      color: $white;
-      font-size: 1.2rem;
-      padding: 0.7rem 2.5rem;
-      border-radius: 5px;
-      transition: 0.15s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+
+      svg {
+        path {
+          fill: $red;
+          transition: 0.15s ease;
+        }
+      }
 
       &:hover {
         cursor: pointer;
-        background-color: $redHover;
+        svg {
+          path {
+            fill: $redHover;
+          }
+        }
       }
     }
   }
@@ -51,16 +63,7 @@
 
     form {
       width: 90vw;
-      flex-direction: column;
-
-      input {
-        width: 100%;
-      }
-
-      button {
-        width: 100%;
-        padding: 0.7rem 0;
-      }
+      padding: 0.5rem;
     }
   }
 }

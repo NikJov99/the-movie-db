@@ -1,10 +1,18 @@
-import ReactSelect from "react-select";
+import Select from "react-select";
 import { genres } from "../../helpers/genres";
 import "./genresselect.scss";
 
 const GenresSelect = ({ setSelectedGenre }) => {
+  const customStyles = {
+    control: (baseStyles, state) => ({
+      ...baseStyles,
+      cursor: state.hover ? "pointer" : "default",
+    }),
+  };
+
   return (
-    <ReactSelect
+    <Select
+      styles={customStyles}
       onChange={(value) => {
         let genreId = parseInt(value.value);
         setSelectedGenre(genreId);

@@ -1,57 +1,61 @@
 @import "../../styles/index.scss";
 
-.css-b62m3t-container {
-  min-width: 180px;
-
-  .react-select-3-live-region {
-  }
-  .css-1f43avz-a11yText-A11yText {
-  }
-
-  .css-13cymwt-control {
-    background-color: $red;
-    border: none;
-    transition: 0.25s ease;
-
-    &:hover {
-      background-color: $redHover;
-      cursor: pointer;
-    }
-
-    .css-art2ul-ValueContainer2 {
-      padding: 0.55rem 0;
-      #react-select-3-placeholder {
-        color: white;
-      }
-
-      .css-w9q2zk-Input2 {
-        #react-select-3-input {
-          &::placeholder {
-            color: red;
-          }
-        }
-      }
-    }
-    .css-4xgw5l-IndicatorsContainer2 {
-      .css-1u9des2-indicatorSeparator {
-        background-color: white;
-      }
-      .css-1xc3v61-indicatorContainer {
-        svg {
-          fill: white;
-        }
-      }
-    }
-  }
-  .css-1nmdiq5-menu {
-    color: white;
-    background-color: #00000056;
-    backdrop-filter: blur(5px);
-  }
+.clearIndicator {
+  background-color: blue;
 }
 
-@media (max-width: 800px) {
-  .css-b62m3t-container {
-    width: 90vw;
-  }
-}
+// .css-b62m3t-container {
+//   min-width: 180px;
+
+//   .react-select-3-live-region {
+//   }
+//   .css-1f43avz-a11yText-A11yText {
+//   }
+
+//   .css-13cymwt-control {
+//     background-color: $red;
+//     border: none;
+//     transition: 0.25s ease;
+
+//     &:hover {
+//       background-color: $redHover;
+//       cursor: pointer;
+//     }
+
+//     .css-art2ul-ValueContainer2 {
+//       padding: 0.55rem 0;
+//       #react-select-3-placeholder {
+//         color: white;
+//       }
+
+//       .css-w9q2zk-Input2 {
+//         #react-select-3-input {
+//           &::placeholder {
+//             color: red;
+//           }
+//         }
+//       }
+//     }
+//     .css-4xgw5l-IndicatorsContainer2 {
+//       .css-1u9des2-indicatorSeparator {
+//         background-color: white;
+//       }
+//       .css-1xc3v61-indicatorContainer {
+//         svg {
+//           fill: white;
+//         }
+//       }
+//     }
+//   }
+//   .css-1nmdiq5-menu {
+//     color: white;
+//     background-color: #00000056;
+//     backdrop-filter: blur(5px);
+//   }
+// }
+
+// @media (max-width: 800px) {
+//   .css-b62m3t-container {
+//     width: 90vw;
+//   }
+// }

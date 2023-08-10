@@ -86,7 +86,7 @@
   .movie-details-container {
     background-color: transparent;
     backdrop-filter: blur(0);
-    width: 95vw;
+    width: 100vw;
     margin: 0;
 
     .movie-info {
@@ -113,8 +113,12 @@
 
     .trailer-container {
       margin: 0 0 2rem 0;
-      width: 90vw;
       height: 300px;
+
+      .youtube-container {
+        border-top: 2px solid $darkGray;
+        border-bottom: 2px solid $darkGray;
+      }
     }
   }
 }
