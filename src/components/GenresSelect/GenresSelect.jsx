@@ -3,16 +3,36 @@ import { genres } from "../../helpers/genres";
 import "./genresselect.scss";
 
 const GenresSelect = ({ setSelectedGenre }) => {
-  const customStyles = {
-    control: (baseStyles, state) => ({
-      ...baseStyles,
-      cursor: state.hover ? "pointer" : "default",
-    }),
-  };
-
   return (
     <Select
-      styles={customStyles}
+      styles={{
+        placeholder: (baseStyles) => ({
+          ...baseStyles,
+          fontFamily: "Roboto",
+          marginRight: "2rem",
+          padding: "1rem 0",
+        }),
+        dropdownIndicator: () => ({
+          color: "#e50914",
+          margin: "0 0.3rem",
+        }),
+        control: (baseStyles, state) => ({
+          ...baseStyles,
+          borderColor: "#464646",
+          borderWidth: "2px",
+          backgroundColor: "#00000056",
+          outline: "none",
+        }),
+        indicatorSeparator: (baseStyles) => ({
+          ...baseStyles,
+          display: "none",
+        }),
+        menuList: (baseStyles) => ({
+          ...baseStyles,
+          backgroundColor: "#00000056",
+        }),
+      }}
+      placeholder="Select genre..."
       onChange={(value) => {
         let genreId = parseInt(value.value);
         setSelectedGenre(genreId);
