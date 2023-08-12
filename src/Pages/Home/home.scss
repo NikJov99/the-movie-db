@@ -35,6 +35,12 @@
     width: 85%;
     min-height: 60vh;
     animation: opacity-up 0.5s ease-in-out forwards;
+
+    .no-movie-err {
+      color: $red;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
   }
 }
 

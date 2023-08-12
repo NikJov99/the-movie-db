@@ -60,10 +60,13 @@ const Home = () => {
       />
       <div className="movie-cards-container">
         {isLoading && <Loader />}
-        {filteredData &&
+        {filteredData.length === 0 ? (
+          <p className="no-movie-err">No movie found</p>
+        ) : (
           filteredData.map((movie) => (
             <MovieCard key={movie.id} movieData={movie} />
-          ))}
+          ))
+        )}
       </div>
     </div>
   );
