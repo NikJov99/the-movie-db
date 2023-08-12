@@ -8,7 +8,7 @@ const Support = () => {
   return (
     <div className="support-container">
       <section>
-        <h1>Need Help? Contact MovieFlix Support!</h1>
+        <h1>Need Help? Contact MOVIEFLIX Support!</h1>
         <p>
           Our dedicated support team is here to assist you with any questions,
           concerns, or technical issues you may have. We strive to provide the
@@ -27,14 +27,14 @@ const Support = () => {
           us improve our service.
         </p>
         <p>
-          At MovieFlix, your satisfaction is our top priority. We are committed
+          At MOVIEFLIX, your satisfaction is our top priority. We are committed
           to providing you with the best movie-watching experience and ensuring
           that you have a smooth and enjoyable time on our platform. Thank you
-          for choosing MovieFlix, and we look forward to assisting you!
+          for choosing MOVIEFLIX, and we look forward to assisting you!
         </p>
         <p>
           Best regards, <br />
-          The <Link to="/">MovieFlix</Link> Support Team
+          The <Link to="/">MOVIEFLIX</Link> Support Team
         </p>
       </section>
     </div>

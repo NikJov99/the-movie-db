@@ -17,16 +17,19 @@ const GenresSelect = ({ setSelectedGenre }) => {
     }),
     dropdownIndicator: () => ({
       color: "#e50914",
-      margin: "0 1rem",
-      transform: "scale(1.5)",
+      margin: "0.4rem 1rem 0 0",
+      transform: "scale(1.4)",
     }),
-    control: (baseStyles, state) => ({
+    control: (baseStyles, { isFocused }) => ({
       ...baseStyles,
-      borderColor: "#464646",
+      borderColor: isFocused ? "#464646" : "#464646",
       borderWidth: "2px",
+      boxShadow: "none",
+      outline: "none",
       backgroundColor: "#00000056",
-      boxShadow: state.isActive ? "none" : "none",
       cursor: "pointer",
+      minWidth: "200px",
+      height: "60px",
     }),
     indicatorSeparator: (baseStyles) => ({
       ...baseStyles,
@@ -34,35 +37,48 @@ const GenresSelect = ({ setSelectedGenre }) => {
     }),
     menuList: (baseStyles) => ({
       ...baseStyles,
-      backgroundColor: "#000",
-      opacity: "90%",
-      color: "red",
+      backgroundColor: "#transparent",
+      color: "white",
       fontFamily: "Roboto",
       borderRadius: "5px",
+      zIndex: "100",
     }),
-    menuPortal: (baseStyles) => ({
+    menu: (baseStyles) => ({
       ...baseStyles,
-      color: "aqua",
-      backgroundColor: "green",
+      backgroundColor: "#000000ee",
+    }),
+    option: (baseStyles, { isFocused }) => ({
+      ...baseStyles,
+      cursor: "pointer",
+      backgroundColor: "transparent",
+      color: isFocused ? "#b30c14" : "white",
+      fontWeight: "600",
+      transition: "0.10s ease",
     }),
   };
 
   return (
-    <Select
-      styles={customStyles}
-      defaultValue="All"
-      placeholder="Select genre..."
-      onChange={(value) => {
-        let genreId = parseInt(value.value);
-        setSelectedGenre(genreId);
-      }}
-      options={Object.entries(genres).map(([key, genre]) => {
-        return {
-          value: key,
-          label: genre,
-        };
-      })}
-    />
+    <div
+      className="select-container"
+      style={{ position: "relative", zIndex: "501" }}
+    >
+      <Select
+        styles={customStyles}
+        defaultValue="All"
+        isSearchable={false}
+        placeholder="Select genre..."
+        onChange={(value) => {
+          let genreId = parseInt(value.value);
+          setSelectedGenre(genreId);
+        }}
+        options={Object.entries(genres).map(([key, genre]) => {
+          return {
+            value: key,
+            label: genre,
+          };
+        })}
+      />
+    </div>
   );
 };
 

@@ -1,4 +1,5 @@
 export const genres = {
+  all: "All",
   28: "Action",
   12: "Adventure",
   16: "Animation",

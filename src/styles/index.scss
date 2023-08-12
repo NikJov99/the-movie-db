@@ -12,6 +12,7 @@ $black: #000;
 $lightGray: #cccccc;
 $darkGray: #464646;
 $lowOpacityBlack: #00000056;
+$menu: #000000e1;
 $lowestOpacityBlack: #00000020;
 $highOpacityBlack: #000000ee;
 $overlay: #000000de;
@@ -60,7 +61,8 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   min-height: 100vh;
-  background-color: $black;
+  // background-color: $black;
+  background-color: white;
 }
 
 @media (max-width: 800px) {
