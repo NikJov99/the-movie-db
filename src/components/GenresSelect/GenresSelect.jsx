@@ -41,11 +41,11 @@ const GenresSelect = ({ setSelectedGenre }) => {
       color: "white",
       fontFamily: "Roboto",
       borderRadius: "5px",
-      zIndex: "100",
     }),
     menu: (baseStyles) => ({
       ...baseStyles,
       backgroundColor: "#000000ee",
+      textAlign: "center",
     }),
     option: (baseStyles, { isFocused }) => ({
       ...baseStyles,
@@ -54,17 +54,15 @@ const GenresSelect = ({ setSelectedGenre }) => {
       color: isFocused ? "#b30c14" : "white",
       fontWeight: "600",
       transition: "0.10s ease",
+      zIndex: "9999",
     }),
   };
 
   return (
-    <div
-      className="select-container"
-      style={{ position: "relative", zIndex: "501" }}
-    >
+    <div className="select-container">
       <Select
+        menuPortalTarget={document.body}
         styles={customStyles}
-        defaultValue="All"
         isSearchable={false}
         placeholder="Select genre..."
         onChange={(value) => {
